@@ -38,8 +38,6 @@ async function main() {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
     console.log("connection successful");
-
-    app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
   
   } catch (err) {
     console.error("Database connection failed:", err);
@@ -47,3 +45,5 @@ async function main() {
 }
 
 main();
+
+export default app;
